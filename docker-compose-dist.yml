@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   mongo:
-    container_name: adn_greenpeace_mongo
+    container_name: adn_greenpeace_mongo_dist
     image: mongo:4
     restart: always
     volumes:
