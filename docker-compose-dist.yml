@@ -1,10 +1,10 @@
-version: '3.8'
+version: '3'
 services:
-  mongo:
-    container_name: adn_greenpeace_mongo_dist
-    image: mongo:4
-    restart: always
-    volumes:
-      - ./_shared_volume/db/:/data/db/
+  web:
+    container_name: adn_greenpeace_client
+    image: adn_greenpeace_client:dist
+    build:
+      context: ./adn-greenpeace-client
+      dockerfile: Dockerfile-dist
     ports:
-      - "27018:27017"
+      - "5053:80"
