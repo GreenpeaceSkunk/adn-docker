@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 services:
   adn_greenpeace_client:
     container_name: adn_greenpeace_client
@@ -8,8 +8,6 @@ services:
       dockerfile: Dockerfile-dev
     ports:
       - "5053:3000"
-    # depends_on:
-    #   - api
     stdin_open: true
     volumes:
       - ./adn-greenpeace-client/:/usr/src/app/
